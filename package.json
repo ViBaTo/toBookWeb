@@ -24,5 +24,18 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "vite": "^6.3.5"
-  }
+  },
+  "description": "Plataforma web para reservas inteligentes con IA, diseñada para el sector hospitality (restaurantes y hoteles). Permite transformar llamadas perdidas en reservas confirmadas y mejorar la experiencia del cliente con agentes de voz automáticos.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViBaTo/toBookWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViBaTo/toBookWeb/issues"
+  },
+  "homepage": "https://github.com/ViBaTo/toBookWeb#readme"
 }
