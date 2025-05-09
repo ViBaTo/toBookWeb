@@ -14,7 +14,8 @@ import {
 import './Hero.css'
 
 // Definir las constantes fuera del componente
-const FULL_CONVERSATION_AUDIO = '/audio/conversation.m4a'
+const FULL_CONVERSATION_AUDIO =
+  'https://res.cloudinary.com/defj36ojy/video/upload/v1746801221/conversation_xpwizp.m4a'
 
 const EnhancedHero = () => {
   const [currentStep, setCurrentStep] = useState(0)

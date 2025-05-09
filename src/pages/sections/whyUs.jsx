@@ -54,7 +54,7 @@ const WhyChooseSection = () => {
             </p>
           </div>
 
-          <div className='why-choose-card'>
+          {/*<div className='why-choose-card'>
             <div className='why-choose-card-icon'>
               <Shield />
             </div>
@@ -63,9 +63,10 @@ const WhyChooseSection = () => {
               Suscripción transparente sin costes ocultos con prueba gratuita de
               27 días sin compromiso.
             </p>
-          </div>
+          </div>*/}
         </div>
 
+        {/*
         <div className='why-choose-testimonial'>
           <blockquote>
             "Lo que más sorprende a nuestros clientes es escuchar su nombre
@@ -76,6 +77,7 @@ const WhyChooseSection = () => {
             — Laura Martínez, Directora de Restaurant Gaudi, Barcelona
           </cite>
         </div>
+        */}
 
         <div className='why-choose-cta'>
           <a href='#demo' className='why-choose-cta-button'>
