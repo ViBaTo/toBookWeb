@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from './pages/sections/navBar'
-import Hero from './pages/sections/hero'
-import Percentages from './pages/sections/percentages'
+import NavBar from './pages/sections/navBar.jsx'
+import Hero from './pages/sections/hero.jsx'
+import Percentages from './pages/sections/percentages.jsx'
 import './styles/App.css'
-import ForWho from './pages/sections/forWho'
-import WhyUs from './pages/sections/whyUs'
-import Comparison from './pages/sections/comparison'
+import ForWho from './pages/sections/forWho.jsx'
+import WhyUs from './pages/sections/whyUs.jsx'
+import Comparison from './pages/sections/comparison.jsx'
 function App() {
   return (
     <div className='main-layout'>
