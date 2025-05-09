@@ -11,7 +11,7 @@ import {
   Volume2,
   VolumeX
 } from 'lucide-react'
-import './Hero.css'
+import './hero.css'
 
 // Definir las constantes fuera del componente
 const FULL_CONVERSATION_AUDIO =
