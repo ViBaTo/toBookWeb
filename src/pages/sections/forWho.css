@@ -1,0 +1,176 @@
+/* CSS para sección "Para Quién Es" */
+
+.for-who-section {
+  padding: 50px 0;
+  background-color: var(--color-primary-white);
+}
+
+.for-who-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.for-who-tag {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-base-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+  opacity: 0.9;
+}
+
+.for-who-title {
+  font-size: 38px;
+  font-weight: var(--font-weight-m);
+  color: var(--color-base-primary);
+  line-height: 1.2;
+  margin-bottom: 60px;
+  max-width: 800px;
+  letter-spacing: -0.02em;
+}
+
+.for-who-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.for-who-card {
+  padding: 24px;
+  border-radius: 12px;
+  background: linear-gradient(
+    145deg,
+    rgba(246, 246, 246, 0.5) 0%,
+    rgba(246, 246, 246, 0.8) 100%
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+}
+
+.for-who-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.for-who-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-base-primary);
+  border-radius: 12px;
+  margin-bottom: 18px;
+  color: white;
+}
+
+.for-who-card-title {
+  font-size: 20px;
+  font-weight: var(--font-weight-sb);
+  color: var(--color-base-primary);
+  margin-bottom: 10px;
+}
+
+.for-who-card-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-dark-gray);
+  margin-bottom: 16px;
+}
+
+.for-who-card-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.for-who-card-features li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--color-dark-accent);
+}
+
+.for-who-card-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-base-primary);
+  opacity: 0.7;
+}
+
+.for-who-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.for-who-cta-button {
+  display: inline-block;
+  background-color: var(--color-base-primary);
+  color: var(--color-primary-white);
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-m);
+  padding: 10px 27px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.for-who-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(18, 117, 251, 0.25);
+  cursor: pointer;
+}
+
+.for-who-cta-note {
+  font-size: 14px;
+  color: var(--color-dark-gray);
+  opacity: 0.8;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 900px) {
+  .for-who-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .for-who-section {
+    padding: 70px 0;
+  }
+
+  .for-who-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .for-who-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .for-who-title {
+    font-size: 28px;
+  }
+
+  .for-who-card-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
