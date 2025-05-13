@@ -109,7 +109,7 @@ const FormPage = () => {
       try {
         // URL del webhook
         const webhookUrl =
-          'https://hook.eu2.make.com/mwuh5j17qe1i7movo9quu57bhadu56nj'
+          'https://hook.eu2.make.com/qdjj4i64my415ont25kxl2fsmfr5obwe'
 
         // Enviar los datos al webhook
         const response = await fetch(webhookUrl, {
