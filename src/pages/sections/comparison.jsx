@@ -8,6 +8,7 @@ import {
   UserCheck
 } from 'lucide-react'
 import './comparison.css'
+import { Link } from 'react-router-dom'
 
 // Counter animado
 function Counter({ value, prefix = '', suffix = '', duration = 1200 }) {
@@ -318,9 +319,9 @@ const ComparisonSection = () => {
         </div>
 
         <div className='comparison-cta'>
-          <a href='#demo' className='comparison-cta-button'>
+          <Link to='/demo' className='comparison-cta-button'>
             VER DEMOSTRACIÓN EN VIVO
-          </a>
+          </Link>
         </div>
       </div>
     </section>

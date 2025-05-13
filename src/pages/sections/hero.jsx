@@ -11,7 +11,8 @@ import {
   Volume2,
   VolumeX
 } from 'lucide-react'
-import './Hero.css'
+import './hero.css'
+import { Link } from 'react-router-dom'
 
 // Definir las constantes fuera del componente
 const FULL_CONVERSATION_AUDIO =
@@ -455,9 +456,9 @@ const EnhancedHero = () => {
           </p>
 
           <div className='hero__cta-container'>
-            <a href='#demo' className='hero__cta-button'>
+            <Link to='/demo' className='hero__cta-button'>
               PRUEBA 27 DÍAS GRATIS
-            </a>
+            </Link>
             <span className='hero__cta-note'>Sin compromiso ni tarjeta</span>
           </div>
         </div>
