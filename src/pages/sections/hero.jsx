@@ -20,8 +20,8 @@ const FULL_CONVERSATION_AUDIO =
 
 const EnhancedHero = () => {
   const [currentStep, setCurrentStep] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
-  const [isMuted, setIsMuted] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
   const [audioDuration, setAudioDuration] = useState(0)
   const chatBodyRef = useRef(null)
   const audioRef = useRef(null)
