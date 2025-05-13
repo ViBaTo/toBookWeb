@@ -188,8 +188,7 @@
 /* Media queries */
 @media (max-width: 992px) {
   .sidebar {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
   }
 
   .mobile-toggle {
