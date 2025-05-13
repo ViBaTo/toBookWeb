@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowLeft, CheckCircle, Loader2 } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
-import './FormPage.css'
+import './formPage.css'
 import logoImage from '../../assets/images/logov3.png'
 
 const FormPage = () => {
