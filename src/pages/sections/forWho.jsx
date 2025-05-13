@@ -1,6 +1,7 @@
 import React from 'react'
 import { Utensils, Hotel } from 'lucide-react'
 import './forWho.css'
+import { Link } from 'react-router-dom'
 
 const ForWhoSection = () => {
   return (
@@ -51,9 +52,9 @@ const ForWhoSection = () => {
         </div>
 
         <div className='for-who-cta'>
-          <a href='#demo' className='for-who-cta-button'>
+          <Link to='/demo' className='for-who-cta-button'>
             SOLICITAR DEMO GRATIS
-          </a>
+          </Link>
           <p className='for-who-cta-note'>Implementación en menos 3 días</p>
         </div>
       </div>

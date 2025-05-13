@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Menu, X, ChevronRight } from 'lucide-react'
 import logoImage from '../../assets/images/logov3.png'
 import './navBar.css'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -53,9 +54,13 @@ const NavBar = () => {
           </div>
 
           <div className='mobile-menu__actions'>
-            <button className='mobile-menu__action-btn mobile-menu__action-btn--primary'>
+            <Link
+              to='/demo'
+              className='mobile-menu__action-btn mobile-menu__action-btn--primary'
+              onClick={toggleMenu}
+            >
               Solicitar demo
-            </button>
+            </Link>
             <button className='mobile-menu__action-btn mobile-menu__action-btn--secondary'>
               Inicia Sesión
             </button>
@@ -87,9 +92,9 @@ const NavBar = () => {
         <div className='sidebar__divider'></div>
 
         <div className='sidebar__actions'>
-          <a href='#' className='sidebar__action'>
+          <Link to='/demo' className='sidebar__action'>
             Solicitar demo
-          </a>
+          </Link>
           <a href='#' className='sidebar__action'>
             Inicia Sesión
           </a>

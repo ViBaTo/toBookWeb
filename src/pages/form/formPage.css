@@ -1,0 +1,251 @@
+.form-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.form-header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.form-logo-container {
+  max-width: 150px;
+}
+
+.form-logo {
+  width: 100%;
+  height: auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  color: var(--color-dark-gray);
+  font-size: 0.9rem;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: var(--color-primary-blue);
+}
+
+.form-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 3rem;
+}
+
+.form-intro {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.form-intro h1 {
+  color: var(--color-dark-gray);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.form-intro p {
+  color: var(--color-medium-gray);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-dark-gray);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-blue);
+  box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.15);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #ff5252;
+}
+
+.form-error {
+  color: #ff5252;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.privacy-policy {
+  margin: 1rem 0;
+}
+
+.privacy-policy p {
+  font-size: 0.9rem;
+  color: var(--color-medium-gray);
+  line-height: 1.5;
+}
+
+.privacy-policy a {
+  color: var(--color-primary-blue);
+  text-decoration: underline;
+}
+
+.submit-button {
+  background-color: var(--color-primary-blue);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: center;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-button:hover {
+  background-color: #2363cc;
+}
+
+.submit-button:disabled {
+  background-color: #a0c1f7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-message h2 {
+  color: var(--color-dark-gray);
+  font-size: 1.75rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.success-message p {
+  color: var(--color-medium-gray);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.back-home-button {
+  background-color: var(--color-primary-blue);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-home-button:hover {
+  background-color: #2363cc;
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .form-header {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .back-button {
+    align-self: flex-start;
+  }
+}

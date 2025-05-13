@@ -1,6 +1,7 @@
 import React from 'react'
 import { Zap, Clock, Headphones, LineChart, Shield } from 'lucide-react'
 import './whyUs.css'
+import { Link } from 'react-router-dom'
 
 const WhyChooseSection = () => {
   return (
@@ -80,9 +81,9 @@ const WhyChooseSection = () => {
         */}
 
         <div className='why-choose-cta'>
-          <a href='#demo' className='why-choose-cta-button'>
+          <Link to='/demo' className='why-choose-cta-button'>
             SOLICITAR DEMO GRATUITA
-          </a>
+          </Link>
           <p className='why-choose-cta-note'>Prueba 27 días sin compromiso</p>
         </div>
       </div>
