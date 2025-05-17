@@ -229,6 +229,7 @@
 /* Mobile toggle button - VERSIÓN MEJORADA */
 /* Mobile toggle button - SIN CÍRCULO BLANCO */
 .mobile-toggle {
+  display: none !important;
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
@@ -275,7 +276,7 @@
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex !important;
   }
 }
 
