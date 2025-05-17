@@ -17,8 +17,7 @@
 .why-choose-section::after {
   content: '';
   position: absolute;
-  width: 800px;
-  height: 800px;
+
   border-radius: 50%;
   background: radial-gradient(
     circle,
