@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './footer.css'
+import logoImage from '../../assets/images/logov3.png'
 
 const Footer = () => {
   return (
@@ -8,11 +9,7 @@ const Footer = () => {
       <div className='footer__container'>
         <div className='footer__grid'>
           <div className='footer__brand'>
-            <img
-              src='/src/assets/images/logov3.png'
-              alt='toBook Logo'
-              className='footer__logo'
-            />
+            <img src={logoImage} alt='toBook Logo' className='footer__logo' />
             <p className='footer__tagline'>
               Revolucionando las reservas con inteligencia artificial de voz
             </p>
