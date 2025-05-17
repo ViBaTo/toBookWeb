@@ -6,6 +6,7 @@ import './styles/App.css'
 import ForWho from './pages/sections/forWho.jsx'
 import WhyUs from './pages/sections/whyUs.jsx'
 import Comparison from './pages/sections/comparison.jsx'
+import Footer from './pages/sections/footer.jsx'
 import { Routes, Route } from 'react-router-dom'
 import FormPage from './pages/form/formPage.jsx'
 
@@ -28,13 +29,13 @@ function App() {
                 <WhyUs />
                 <hr className='section-divider' />
                 <Comparison />
+                <Footer />
               </>
             }
           />
           <Route path='/demo' element={<FormPage />} />
         </Routes>
       </div>
-      {/* Aquí puedes añadir más secciones */}
     </div>
   )
 }
