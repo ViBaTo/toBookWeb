@@ -13,31 +13,33 @@ import FormPage from './pages/form/formPage.jsx'
 function App() {
   return (
     <div className='main-layout'>
-      <NavBar />
-      <div className='main-content'>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <>
-                <Hero />
-                <hr className='section-divider' />
-                <Percentages />
-                <hr className='section-divider' />
-                <ForWho />
-                <hr className='section-divider' />
-                <WhyUs />
-                <hr className='section-divider' />
-                <Comparison />
-                <Footer />
-              </>
-            }
-          />
-          <Route path='/demo' element={<FormPage />} />
-        </Routes>
+      <div className='main-content-wrapper'>
+        <NavBar />
+        <div className='main-content'>
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <>
+                  <Hero />
+                  <hr className='section-divider' />
+                  <Percentages />
+                  <hr className='section-divider' />
+                  <ForWho />
+                  <hr className='section-divider' />
+                  <WhyUs />
+                  <hr className='section-divider' />
+                  <Comparison />
+                </>
+              }
+            />
+            <Route path='/demo' element={<FormPage />} />
+          </Routes>
+        </div>
       </div>
+
+      <Footer />
     </div>
   )
 }
-
 export default App

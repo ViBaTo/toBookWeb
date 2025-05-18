@@ -213,6 +213,7 @@ i {
   height: 100%;
 }
 
+/* Estructura principal de la página */
 .main-layout {
   display: flex;
   flex-direction: column;
@@ -220,14 +221,44 @@ i {
   position: relative;
 }
 
+/* Contenedor principal con borde redondeado en la parte inferior */
+.main-content-wrapper {
+  position: relative;
+  background-color: var(--color-primary-white);
+  width: 100%; /* Aseguramos que ocupe todo el ancho */
+  z-index: 10;
+}
+
+/* Divisor curvo - exactamente como en Sesame */
+.content-footer-divider {
+  position: relative;
+  height: 50px; /* Altura visible del divisor */
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: -50px; /* Hace que se superponga al footer */
+  z-index: 11; /* Un nivel más alto que el main-content-wrapper */
+}
+
+.content-footer-divider::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white; /* Mismo color que main-content-wrapper */
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+}
+
 .main-content {
-  margin-left: 200px; /* Mantén esto según tus necesidades */
+  margin-left: 200px; /* Esto crea tu layout con sidebar */
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
   position: relative;
-  background: var(--color-primary-white);
+  background: transparent; /* Cambiado a transparente para que se vea el fondo del wrapper */
 }
 
 /*--------------------------------------------------------------
@@ -263,6 +294,14 @@ i {
   margin-bottom: -20px;
 }
 
+/* Estilos para asegurar que el footer se coloque correctamente */
+.footer {
+  position: relative;
+  z-index: 5;
+  padding-top: 70px; /* Aumentado para compensar mejor la superposición */
+  margin-top: 0;
+}
+
 @media (max-width: 992px) {
   .main-content {
     margin-left: 0;
@@ -271,6 +310,20 @@ i {
   .container {
     max-width: 100%;
     padding: 0 0.5rem;
+  }
+
+  /* Ajustes responsivos para el divisor curvo */
+  .content-footer-divider {
+    height: 30px;
+    margin-bottom: -30px;
+  }
+
+  .content-footer-divider::after {
+    height: 60px;
+  }
+
+  .footer {
+    padding-top: 50px;
   }
 }
 
@@ -282,5 +335,19 @@ i {
   .container {
     max-width: 100%;
     padding: 0 0.25rem;
+  }
+
+  /* Reducir el tamaño del divisor en móviles */
+  .content-footer-divider {
+    height: 20px;
+    margin-bottom: -20px;
+  }
+
+  .content-footer-divider::after {
+    height: 40px;
+  }
+
+  .footer {
+    padding-top: 40px;
   }
 }
