@@ -2,26 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './footer.css'
 import logoImage from '../../assets/images/logov3.png'
-// Importa tu video
-import backgroundVideo from '../../assets/videos/4K Video Clip.mp4' // Ajusta la ruta según tu estructura
 
 const Footer = () => {
   return (
     <footer className='footer'>
-      {/* Video de fondo */}
-      <div className='footer__video-container'>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className='footer__background-video'
-        >
-          <source src={backgroundVideo} type='video/mp4' />
-        </video>
-        <div className='footer__overlay'></div>
-      </div>
-
       <div className='footer__container'>
         {/* Resto del contenido igual que arriba */}
         <div className='footer__logo-section'>

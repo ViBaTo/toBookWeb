@@ -1,5 +1,5 @@
 .footer {
-  background: #181818;
+  background: #0e2f52;
   color: #fff;
   position: relative;
   padding: 60px 0 20px;
@@ -17,6 +17,8 @@
   position: relative;
   z-index: 1;
   border-radius: 0 0 24px 24px;
+  background: none;
+  color: #fff;
 }
 
 .footer__logo-section {
@@ -24,8 +26,10 @@
 }
 
 .footer__logo {
-  height: 28px;
+  height: 40px;
   width: auto;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(104%) contrast(104%);
 }
 
 .footer__nav {
