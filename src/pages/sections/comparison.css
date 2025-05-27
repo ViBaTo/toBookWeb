@@ -132,7 +132,7 @@
 }
 
 .comparison-tobook h3 {
-  color: white;
+  color: var(--color-primary-blue);
 }
 
 .comparison-chat {

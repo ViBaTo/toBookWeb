@@ -44,6 +44,7 @@
   font-size: 16px;
   opacity: 0.8;
   transition: opacity 0.2s ease;
+  cursor: pointer;
 }
 
 .footer__nav-link:hover {
@@ -60,6 +61,7 @@
   color: #fff;
   opacity: 0.8;
   transition: opacity 0.2s ease;
+  cursor: pointer;
 }
 
 .footer__social-link:hover {
@@ -90,6 +92,7 @@
   font-size: 14px;
   opacity: 0.6;
   transition: opacity 0.2s ease;
+  cursor: pointer;
 }
 
 .footer__legal-link:hover {
