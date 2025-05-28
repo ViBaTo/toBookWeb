@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import { ArrowLeft, CheckCircle, Loader2 } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './formPage.css'
 import logoImage from '../../assets/images/logov3.png'
 
 const FormPage = () => {
-  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -160,20 +159,20 @@ const FormPage = () => {
   }
 
   return (
-    <div className='form-page'>
-      <div className='form-header'>
-        <div className='form-logo-container'>
-          <Link to='/'>
-            <img src={logoImage} alt='toBook Logo' className='form-logo' />
+    <div className='form-page form-page-centered'>
+      <div className='form-container'>
+        <div className='form-header'>
+          <div className='form-logo-container'>
+            <Link to='/'>
+              <img src={logoImage} alt='toBook Logo' className='form-logo' />
+            </Link>
+          </div>
+          <Link to='/' className='back-button'>
+            <ArrowLeft size={20} />
+            <span>Volver</span>
           </Link>
         </div>
-        <Link to='/' className='back-button'>
-          <ArrowLeft size={20} />
-          <span>Volver</span>
-        </Link>
-      </div>
 
-      <div className='form-container'>
         {!submitted ? (
           <>
             <div className='form-intro'>

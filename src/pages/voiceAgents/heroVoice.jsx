@@ -11,14 +11,14 @@ import {
   Volume2,
   VolumeX
 } from 'lucide-react'
-import './hero.css'
+import './heroVoice.css'
 import { Link } from 'react-router-dom'
 
 // Definir las constantes fuera del componente
 const FULL_CONVERSATION_AUDIO =
   'https://res.cloudinary.com/defj36ojy/video/upload/v1746801221/conversation_xpwizp.m4a'
 
-const EnhancedHero = () => {
+const HeroVoice = () => {
   const [currentStep, setCurrentStep] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
@@ -439,7 +439,7 @@ const EnhancedHero = () => {
   }
 
   return (
-    <div className='hero page-fade' id='hero'>
+    <div className='hero' id='hero-voice'>
       <div className='hero__container hero__enhanced'>
         <div className='hero__content'>
           <div className='hero__tag'>INTELIGENCIA ARTIFICIAL DE VOZ</div>
@@ -545,4 +545,4 @@ const EnhancedHero = () => {
   )
 }
 
-export default EnhancedHero
+export default HeroVoice

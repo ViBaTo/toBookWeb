@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import './percentages.css'
+import './percentagesVoice.css'
 
 const data = [
   {
@@ -81,7 +81,7 @@ function CounterCircle({ value, color }) {
   )
 }
 
-const Percentages = () => {
+const PercentagesVoice = () => {
   const [animate, setAnimate] = useState(false)
   const ref = useRef()
 
@@ -114,4 +114,4 @@ const Percentages = () => {
   )
 }
 
-export default Percentages
+export default PercentagesVoice

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const WhyChooseSection = () => {
   return (
-    <section className='why-choose-section'>
+    <section className='whyus-section' id='whyus'>
       <div className='why-choose-container'>
         <h2 className='why-choose-title'>¿Por qué toBook?</h2>
 
@@ -26,7 +26,7 @@ const WhyChooseSection = () => {
             <div className='why-choose-card-icon'>
               <Clock />
             </div>
-            <h3>Activación en 3 días</h3>
+            <h3>Activación en menos de 7 días</h3>
             <p>
               Implementación rápida sin complicaciones técnicas. Nosotros nos
               encargamos de todo el proceso.

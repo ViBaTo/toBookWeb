@@ -249,3 +249,11 @@
     align-self: flex-start;
   }
 }
+
+.form-page-centered {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
