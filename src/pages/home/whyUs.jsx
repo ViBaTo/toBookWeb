@@ -17,8 +17,8 @@ const WhyChooseSection = () => {
             <h3>IA que evoluciona y recuerda</h3>
             <p>
               Agentes que mejoran con cada interacción, adaptan el estilo de tu
-              marca y reconocen a quienes llaman por su nombre, creando
-              experiencias personalizadas.
+              marca y reconocen a quienes llaman o escribenpor su nombre,
+              creando experiencias personalizadas.
             </p>
           </div>
 

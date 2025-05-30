@@ -1,0 +1,319 @@
+/* Estilos para Hero Homepage Simplificado */
+
+/* Estructura base manteniendo el grid 50/50 */
+.hero__enhanced {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Lado izquierdo - Contenido principal */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tag superior */
+.hero__tag {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary-blue);
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+/* Título con impacto visual */
+.hero__title--impact {
+  font-size: 42px;
+  color: var(--color-base-primary);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.02em;
+}
+
+.hero__title--highlight {
+  color: var(--color-primary-blue);
+  position: relative;
+}
+
+.hero__title--highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-blue) 0%,
+    rgba(18, 117, 251, 0.6) 100%
+  );
+  border-radius: 2px;
+}
+
+/* Descripción con más impacto */
+.hero__description--impact {
+  font-size: var(--font-size-m);
+  line-height: 1.6;
+  color: var(--color-dark-gray);
+  max-width: 500px;
+  font-weight: 400;
+}
+
+.hero__description--impact strong {
+  color: var(--color-primary-blue);
+  font-weight: 600;
+}
+
+/* Lado derecho - Calculadora de pérdida + CTAs */
+.hero__right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+  max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+}
+
+/* Calculadora de dinero perdido */
+.hero__loss-calculator {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hero__loss-calculator::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(245, 158, 11, 0.1) 10px,
+    rgba(245, 158, 11, 0.1) 20px
+  );
+  animation: slidePattern 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes slidePattern {
+  0% {
+    transform: translateX(-50px) translateY(-50px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.hero__loss-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(220, 38, 38, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: #dc2626;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__loss-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__loss-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #92400e;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.hero__loss-amount {
+  font-size: 36px;
+  font-weight: 800;
+  color: #dc2626;
+  margin-bottom: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+.hero__loss-period {
+  font-size: 18px;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.hero__loss-note {
+  font-size: 13px;
+  color: #92400e;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* CTAs duales */
+.hero__cta-dual {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.hero__cta-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  min-height: 0;
+}
+
+.hero__cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.hero__cta-button:hover::before {
+  left: 100%;
+}
+
+.hero__cta-voice {
+  background-color: var(--color-primary-blue);
+  color: white;
+  box-shadow: 0 8px 20px rgba(18, 117, 251, 0.25);
+}
+
+.hero__cta-chat {
+  background-color: var(--color-primary-blue);
+  color: white;
+  box-shadow: 0 8px 20px rgba(18, 117, 251, 0.25);
+}
+
+.hero__cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(18, 117, 251, 0.25);
+}
+
+.hero__cta-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero__cta-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  letter-spacing: 0.03em;
+}
+
+.hero__cta-subtitle {
+  display: block;
+  font-size: 13px;
+  opacity: 0.7;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero__enhanced {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .hero__content {
+    text-align: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero__right-section {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero__loss-calculator {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero__title--impact {
+    text-align: center;
+  }
+
+  .hero__description--impact {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+    min-height: unset;
+  }
+
+  .hero__title--impact {
+    font-size: 2.2rem;
+  }
+
+  .hero__cta-button {
+    padding: 16px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title--impact {
+    font-size: 1.8rem;
+  }
+
+  .hero__description--impact {
+    font-size: 0.95rem;
+  }
+
+  .hero__cta-button {
+    padding: 16px 32px;
+  }
+}

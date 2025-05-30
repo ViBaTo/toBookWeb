@@ -1,21 +1,21 @@
 import React, { useRef, useEffect, useState } from 'react'
-import './percentages.css'
+import './percentagesChat.css'
 
 const data = [
   {
-    value: 68,
+    value: 81,
     color: 'var(--color-base-primary)', // Puedes ajustar a tu variable lila
-    text: 'Reservas salvadas por estar fuera de horario de atención'
+    text: 'Consultas que llegan fuera del horario comercial'
   },
   {
-    value: 23,
+    value: 39,
     color: 'var(--color-base-primary)',
-    text: 'Reservas recuperadas por inicialmente no haber disponibilidad'
+    text: 'Incremento en satisfacción del cliente'
   },
   {
-    value: 20,
+    value: 28,
     color: 'var(--color-base-primary)',
-    text: 'Efectividad total de políticas de propuesta en las llamadas'
+    text: 'Más ingresos por habitación con recomendaciones automáticas'
   }
 ]
 
@@ -81,7 +81,7 @@ function CounterCircle({ value, color }) {
   )
 }
 
-const Percentages = () => {
+const PercentagesChat = () => {
   const [animate, setAnimate] = useState(false)
   const ref = useRef()
 
@@ -114,4 +114,4 @@ const Percentages = () => {
   )
 }
 
-export default Percentages
+export default PercentagesChat

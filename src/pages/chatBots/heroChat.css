@@ -724,3 +724,43 @@
   background-color: var(--color-base-primary);
   color: white;
 }
+
+.hero__message-image {
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero__message-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero__message-image img:hover {
+  transform: scale(1.02);
+}
+
+.hero__platform-icons {
+  display: flex;
+  gap: 20px;
+  margin: 0px 0 20px 0;
+  align-items: center;
+}
+
+.hero__platform-icons img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.2s;
+  cursor: pointer;
+  opacity: 0.92;
+}
+
+.hero__platform-icons img:hover {
+  transform: scale(1.12);
+  opacity: 1;
+}

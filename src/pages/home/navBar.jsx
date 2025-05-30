@@ -41,7 +41,7 @@ const NavBar = () => {
       {isOpen && (
         <div className='mobile-menu open'>
           <div className='mobile-menu__header'>
-            <Link to='/#hero'>
+            <Link to='/#'>
               <img src={logoImage} alt='toBook Logo' className='navbar__logo' />
             </Link>
             <button onClick={toggleMenu} className='mobile-menu__close'>
@@ -66,9 +66,15 @@ const NavBar = () => {
             >
               Agentes de Voz <ChevronRight size={16} />
             </Link>
-            <a href='#' className='mobile-menu__link'>
+            <Link
+              to='/chatbots'
+              className={`mobile-menu__link${
+                location.pathname === '/chatbots' ? ' active' : ''
+              }`}
+              onClick={toggleMenu}
+            >
               Chatbots <ChevronRight size={16} />
-            </a>
+            </Link>
             <div className='mobile-menu__dropdown'>
               <button
                 onClick={toggleMobileRecursosDropdown}
@@ -131,9 +137,14 @@ const NavBar = () => {
           >
             Agentes de Voz
           </Link>
-          <a href='#' className='sidebar__link'>
+          <Link
+            to='/chatbots'
+            className={`sidebar__link${
+              location.pathname === '/chatbots' ? ' active' : ''
+            }`}
+          >
             Chatbots
-          </a>
+          </Link>
           <div
             className='sidebar__dropdown'
             onMouseEnter={() => setShowRecursosDropdown(true)}
