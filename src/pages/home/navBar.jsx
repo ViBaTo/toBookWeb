@@ -88,18 +88,28 @@ const NavBar = () => {
               </button>
               {showMobileRecursosDropdown && (
                 <div className='mobile-menu__submenu'>
-                  <a href='#' className='mobile-menu__submenu-link'>
+                  <Link
+                    to='/recursos/como-empezar'
+                    className='mobile-menu__submenu-link'
+                    onClick={toggleMenu}
+                  >
                     Cómo empezar
-                  </a>
+                  </Link>
                   <a href='#' className='mobile-menu__submenu-link'>
                     FAQs
                   </a>
                 </div>
               )}
             </div>
-            <a href='#' className='mobile-menu__link'>
+            <Link
+              to='/pricing'
+              className={`mobile-menu__link${
+                location.pathname === '/pricing' ? ' active' : ''
+              }`}
+              onClick={toggleMenu}
+            >
               Precios <ChevronRight size={16} />
-            </a>
+            </Link>
           </div>
 
           <div className='mobile-menu__actions'>
@@ -158,17 +168,25 @@ const NavBar = () => {
                 showRecursosDropdown ? ' sidebar__submenu--open' : ''
               }`}
             >
-              <a href='#' className='sidebar__submenu-link'>
+              <Link
+                to='/recursos/como-empezar'
+                className='sidebar__submenu-link'
+              >
                 Cómo empezar
-              </a>
+              </Link>
               <a href='#' className='sidebar__submenu-link'>
                 FAQs
               </a>
             </div>
           </div>
-          <a href='#' className='sidebar__link'>
+          <Link
+            to='/pricing'
+            className={`sidebar__link${
+              location.pathname === '/pricing' ? ' active' : ''
+            }`}
+          >
             Precios
-          </a>
+          </Link>
         </nav>
 
         <div className='sidebar__divider'></div>

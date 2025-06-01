@@ -3,6 +3,7 @@ import HeroVoice from './heroVoice'
 import ComparisonVoiceSection from './comparisonVoice'
 import ForWhoVoiceSection from './forWhoVoice'
 import PercentagesVoice from './percentagesVoice'
+import RestaurantPackages from '../pricing/packages'
 
 const VoiceAgents = () => {
   return (
@@ -14,6 +15,8 @@ const VoiceAgents = () => {
       <ForWhoVoiceSection />
       <hr className='section-divider' />
       <ComparisonVoiceSection />
+      <hr className='section-divider' />
+      <RestaurantPackages />
     </div>
   )
 }

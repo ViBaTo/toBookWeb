@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ArrowLeft, CheckCircle, Loader2 } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './formPage.css'
 import logoImage from '../../assets/images/logov3.png'
 
 const FormPage = () => {
+  const location = useLocation()
+  const selectedPackage = location.state?.selectedPackage
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -13,36 +16,140 @@ const FormPage = () => {
     company: '',
     role: '',
     businessType: '',
-    employees: '',
-    message: ''
+    size: '',
+    message: '',
+    package: ''
   })
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  const businessTypes = [
-    'Restaurante',
-    'Hotel',
-    'Spa',
-    'Centro Deportivo',
-    'Agencia de Viajes',
-    'Otro'
+  const businessTypes = ['Restaurante', 'Hotel']
+
+  const hotelSizeOptions = [
+    'Pequeño (hasta 150 hab.)',
+    'Mediano (150-300 hab.)',
+    'Grande (+300 hab.)'
+  ]
+  const restaurantSizeOptions = [
+    'Pequeño (menos de 20 comensales)',
+    'Mediano (entre 20 y 50 comensales)',
+    'Grande (más de 50 comensales)'
   ]
 
-  const employeesOptions = [
-    '1-5 empleados',
-    '6-20 empleados',
-    '21-50 empleados',
-    '51-100 empleados',
-    'Más de 100 empleados'
+  const allPackageOptions = [
+    // Restaurante
+    {
+      label: 'Restaurante Básico',
+      value: 'Restaurante Básico',
+      business: 'Restaurante'
+    },
+    {
+      label: 'Restaurante Premium',
+      value: 'Restaurante Premium',
+      business: 'Restaurante'
+    },
+    {
+      label: 'Solución Completa Restaurante',
+      value: 'Solución Completa Restaurante',
+      business: 'Restaurante'
+    },
+    // Hotel Boutique
+    {
+      label: 'Asistente Digital Boutique',
+      value: 'Asistente Digital Boutique',
+      business: 'Hotel',
+      size: 'Pequeño (hasta 150 hab.)'
+    },
+    {
+      label: 'Recepcionista Inteligente Boutique',
+      value: 'Recepcionista Inteligente Boutique',
+      business: 'Hotel',
+      size: 'Pequeño (hasta 150 hab.)'
+    },
+    {
+      label: 'Solución Completa Boutique',
+      value: 'Solución Completa Boutique',
+      business: 'Hotel',
+      size: 'Pequeño (hasta 150 hab.)'
+    },
+    // Hotel Estándar
+    {
+      label: 'Asistente Digital Estándar',
+      value: 'Asistente Digital Estándar',
+      business: 'Hotel',
+      size: 'Mediano (150-300 hab.)'
+    },
+    {
+      label: 'Recepcionista Inteligente Estándar',
+      value: 'Recepcionista Inteligente Estándar',
+      business: 'Hotel',
+      size: 'Mediano (150-300 hab.)'
+    },
+    {
+      label: 'Solución Completa Estándar',
+      value: 'Solución Completa Estándar',
+      business: 'Hotel',
+      size: 'Mediano (150-300 hab.)'
+    },
+    // Hotel Premium
+    {
+      label: 'Asistente Digital Premium',
+      value: 'Asistente Digital Premium',
+      business: 'Hotel',
+      size: 'Grande (+300 hab.)'
+    },
+    {
+      label: 'Recepcionista Inteligente Premium',
+      value: 'Recepcionista Inteligente Premium',
+      business: 'Hotel',
+      size: 'Grande (+300 hab.)'
+    },
+    {
+      label: 'Solución Completa Premium',
+      value: 'Solución Completa Premium',
+      business: 'Hotel',
+      size: 'Grande (+300 hab.)'
+    }
   ]
+
+  useEffect(() => {
+    if (selectedPackage) {
+      // Buscar el paquete en allPackageOptions
+      const pkg = allPackageOptions.find((p) => p.value === selectedPackage)
+      if (pkg) {
+        setFormData((prev) => ({
+          ...prev,
+          package: pkg.value,
+          businessType: pkg.business,
+          size: pkg.size || ''
+        }))
+      }
+    }
+    // eslint-disable-next-line
+  }, [selectedPackage])
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setFormData({
+    let updatedFormData = {
       ...formData,
       [name]: value
-    })
+    }
+    if (name === 'package') {
+      if (value.includes('Restaurante')) {
+        updatedFormData.businessType = 'Restaurante'
+      } else if (
+        value.includes('Hotel') ||
+        value.includes('Boutique') ||
+        value.includes('Estándar') ||
+        value.includes('Premium')
+      ) {
+        updatedFormData.businessType = 'Hotel'
+      } else {
+        updatedFormData.businessType = ''
+      }
+    }
+    setFormData(updatedFormData)
 
     // Limpiar error cuando el usuario empieza a escribir
     if (errors[name]) {
@@ -90,9 +197,14 @@ const FormPage = () => {
       newErrors.businessType = 'Selecciona el tipo de negocio'
     }
 
-    // Validar número de empleados
-    if (!formData.employees) {
-      newErrors.employees = 'Selecciona el número de empleados'
+    // Validar tamaño
+    if (!formData.size) {
+      newErrors.size = 'Selecciona el tamaño de tu negocio'
+    }
+
+    // Validar paquete
+    if (!formData.package) {
+      newErrors.package = 'Selecciona el paquete que te interesa'
     }
 
     setErrors(newErrors)
@@ -136,8 +248,9 @@ const FormPage = () => {
             company: '',
             role: '',
             businessType: '',
-            employees: '',
-            message: ''
+            size: '',
+            message: '',
+            package: ''
           })
           // Comentado: navigate('/')
         }, 3000)
@@ -157,6 +270,16 @@ const FormPage = () => {
       }
     }
   }
+
+  // Filtrar paquetes según selección
+  const sizeOptions =
+    formData.businessType === 'Hotel' ? hotelSizeOptions : restaurantSizeOptions
+  const filteredPackageOptions =
+    formData.businessType === 'Restaurante'
+      ? allPackageOptions.filter((opt) => opt.business === 'Restaurante')
+      : allPackageOptions.filter(
+          (opt) => opt.business === 'Hotel' && opt.size === formData.size
+        )
 
   return (
     <div className='form-page form-page-centered'>
@@ -286,6 +409,7 @@ const FormPage = () => {
                     value={formData.businessType}
                     onChange={handleChange}
                     className={errors.businessType ? 'error' : ''}
+                    required
                   >
                     <option value=''>Seleccionar</option>
                     {businessTypes.map((type, index) => (
@@ -300,25 +424,50 @@ const FormPage = () => {
                 </div>
 
                 <div className='form-group'>
-                  <label htmlFor='employees'>Número de empleados *</label>
+                  <label htmlFor='size'>Tamaño *</label>
                   <select
-                    id='employees'
-                    name='employees'
-                    value={formData.employees}
+                    id='size'
+                    name='size'
+                    value={formData.size}
                     onChange={handleChange}
-                    className={errors.employees ? 'error' : ''}
+                    className={errors.size ? 'error' : ''}
+                    required
+                    disabled={!formData.businessType}
                   >
                     <option value=''>Seleccionar</option>
-                    {employeesOptions.map((option, index) => (
-                      <option key={index} value={option}>
+                    {sizeOptions.map((option) => (
+                      <option key={option} value={option}>
                         {option}
                       </option>
                     ))}
                   </select>
-                  {errors.employees && (
-                    <div className='form-error'>{errors.employees}</div>
+                  {errors.size && (
+                    <div className='form-error'>{errors.size}</div>
                   )}
                 </div>
+              </div>
+
+              <div className='form-group full-width'>
+                <label htmlFor='package'>Paquete de interés *</label>
+                <select
+                  id='package'
+                  name='package'
+                  value={formData.package}
+                  onChange={handleChange}
+                  className={errors.package ? 'error' : ''}
+                  required
+                  disabled={!formData.businessType || !formData.size}
+                >
+                  <option value=''>Seleccionar</option>
+                  {filteredPackageOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                {errors.package && (
+                  <div className='form-error'>{errors.package}</div>
+                )}
               </div>
 
               <div className='form-group full-width'>

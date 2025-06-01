@@ -12,6 +12,8 @@ import FormPage from './pages/form/formPage.jsx'
 import VoiceAgents from './pages/voiceAgents/voiceAgents.jsx'
 import { useEffect } from 'react'
 import ChatBots from './pages/chatbots/chatBots.jsx'
+import PricingPage from './pages/pricing/pricing.jsx'
+import HowToStart from './pages/resources/howToStart.jsx'
 
 function App() {
   const location = useLocation()
@@ -35,7 +37,9 @@ function App() {
     },
     { path: '/demo', element: <FormPage /> },
     { path: '/voice-agents', element: <VoiceAgents /> },
-    { path: '/chatbots', element: <ChatBots /> }
+    { path: '/chatbots', element: <ChatBots /> },
+    { path: '/pricing', element: <PricingPage /> },
+    { path: '/recursos/como-empezar', element: <HowToStart /> }
   ])
 
   useEffect(() => {
