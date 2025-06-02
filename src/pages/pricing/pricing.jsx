@@ -1,5 +1,5 @@
 import React from 'react'
-import RestaurantPackages from './packages.jsx'
+import RestaurantPackages from './packages'
 import './pricing.css'
 
 const PricingPage = () => {
