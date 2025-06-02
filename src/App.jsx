@@ -11,7 +11,7 @@ import { useLocation, useRoutes } from 'react-router-dom'
 import FormPage from './pages/form/formPage.jsx'
 import VoiceAgents from './pages/voiceAgents/voiceAgents.jsx'
 import { useEffect } from 'react'
-import ChatBots from './pages/chatbots/chatBots.jsx'
+import ChatBots from './pages/chatBots/chatBots.jsx'
 import PricingPage from './pages/pricing/pricing.jsx'
 import HowToStart from './pages/resources/howToStart.jsx'
 
