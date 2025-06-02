@@ -6,6 +6,7 @@ import {
   ArrowRight,
   AlertTriangle
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import './hero.css'
 
 const HeroHomepage = () => {
@@ -65,8 +66,8 @@ const HeroHomepage = () => {
           </div>
 
           <div className='hero__cta-dual'>
-            <a
-              href='/voice-agents#hero-voice'
+            <Link
+              to='/voice-agents#hero-voice'
               className='hero__cta-button hero__cta-voice'
             >
               <Phone size={20} />
@@ -77,10 +78,10 @@ const HeroHomepage = () => {
                 </span>
               </div>
               <ArrowRight size={16} />
-            </a>
+            </Link>
 
-            <a
-              href='/chatbots#hero-chat'
+            <Link
+              to='/chatbots#hero-chat'
               className='hero__cta-button hero__cta-chat'
             >
               <MessageCircle size={20} />
@@ -91,7 +92,7 @@ const HeroHomepage = () => {
                 </span>
               </div>
               <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
