@@ -14,6 +14,7 @@ import { useEffect } from 'react'
 import ChatBots from './pages/chatBots/chatBots'
 import PricingPage from './pages/pricing/pricing'
 import HowToStart from './pages/resources/howToStart'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const location = useLocation()
@@ -59,6 +60,7 @@ function App() {
       </div>
 
       <Footer />
+      <Analytics />
     </div>
   )
 }
