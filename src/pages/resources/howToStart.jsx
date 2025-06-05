@@ -7,6 +7,8 @@ import {
   ArrowRight
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import FAQs from './FAQs'
+import './FAQs.css'
 import './howToStart.css'
 
 const steps = [
@@ -62,6 +64,7 @@ const HowToStart = () => {
           Solicitar demo gratuita
         </Link>
       </section>
+      <FAQs />
     </div>
   )
 }
