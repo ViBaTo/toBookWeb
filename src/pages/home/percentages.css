@@ -56,3 +56,31 @@ svg {
 .percentage-block:nth-child(3) .fg {
   stroke: #f59e0b; /* Naranja para oportunidad */
 }
+
+@media (max-width: 900px) {
+  .percentages-section {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .percentages-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  .percentage-block {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .percentages-container {
+    align-items: center;
+    width: 100%;
+  }
+}
