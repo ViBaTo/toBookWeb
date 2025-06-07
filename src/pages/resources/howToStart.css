@@ -10,8 +10,8 @@
 }
 
 .howtostart-hero h1 {
-  font-size: 2.7rem;
-  font-weight: 800;
+  font-size: 42px;
+  font-weight: 500;
   color: var(--color-base-primary);
   margin-bottom: 18px;
 }
@@ -97,7 +97,7 @@
 }
 
 .howtostart-cta h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-base-primary);
   margin-bottom: 18px;
 }
@@ -107,7 +107,7 @@
   background: var(--color-primary-blue);
   color: white;
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 18px 38px;
   border-radius: 30px;
   text-decoration: none;

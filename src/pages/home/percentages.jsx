@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import './percentages.css'
+import '../pricing/packages.css'
 
 const data = [
   {

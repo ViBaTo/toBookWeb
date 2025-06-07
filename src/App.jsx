@@ -15,6 +15,10 @@ import ChatBots from './pages/chatBots/chatBots'
 import PricingPage from './pages/pricing/pricing'
 import HowToStart from './pages/resources/howToStart'
 import { Analytics } from '@vercel/analytics/react'
+import PrivacyPolicy from './pages/legal/privacyPolicy'
+import TermsOfService from './pages/legal/termsOfService'
+import PrivacyPolicyLapala from './pages/legal/privacyPolicyLapala'
+import TermsOfServiceLapala from './pages/legal/termsOfServiceLapala'
 
 function App() {
   const location = useLocation()
@@ -40,7 +44,11 @@ function App() {
     { path: '/voice-agents', element: <VoiceAgents /> },
     { path: '/chatbots', element: <ChatBots /> },
     { path: '/pricing', element: <PricingPage /> },
-    { path: '/recursos/como-empezar', element: <HowToStart /> }
+    { path: '/recursos/como-empezar', element: <HowToStart /> },
+    { path: '/privacidad', element: <PrivacyPolicy /> },
+    { path: '/terminos', element: <TermsOfService /> },
+    { path: '/privacidad-lapala', element: <PrivacyPolicyLapala /> },
+    { path: '/terminos-lapala', element: <TermsOfServiceLapala /> }
   ])
 
   useEffect(() => {

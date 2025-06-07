@@ -120,10 +120,10 @@ const Footer = () => {
             © {new Date().getFullYear()} toBook. Todos los derechos reservados.
           </div>
           <div className='footer__legal-links'>
-            <Link to='#privacy' className='footer__legal-link'>
+            <Link to='/privacidad' className='footer__legal-link'>
               Privacidad
             </Link>
-            <Link to='#terms' className='footer__legal-link'>
+            <Link to='/terminos' className='footer__legal-link'>
               Términos
             </Link>
           </div>
